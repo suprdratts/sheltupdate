@@ -3,12 +3,12 @@ import { createWriteStream, mkdirSync } from "fs";
 import { join } from "path";
 import { Writable } from "stream";
 
-export const name = "Equicord";
-export const description = "Injects Equicord (a Vencord fork); This is not an officially supported Vencord install method";
+export const name = "Vencord (but actually)";
+export const description = "Injects your Vencord fork";
 export const incompatibilities = ["betterdiscord", "vencord", "moonlight"];
 
 export async function setup(target, log) {
-	const releaseUrl = "https://github.com/Equicord/Equicord/releases/download/latest/";
+	const releaseUrl = "https://github.com/suprdratts/Vencord/releases/download/latest/";
 
 	mkdirSync(join(target, "equicord-desktop"), { recursive: true });
 
