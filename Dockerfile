@@ -19,6 +19,6 @@ COPY CHANGELOG.md CHANGELOG.md
 
 COPY --from=pnpm-container node_modules node_modules
 
-EXPOSE 8080/tcp
+EXPOSE 58174/tcp
 ENTRYPOINT ["node", "src/index.js"]
 STOPSIGNAL SIGKILL
