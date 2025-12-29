@@ -12,8 +12,6 @@ RUN pnpm i --frozen-lockfile --prod
 
 FROM node:23-alpine
 
-RUN npm i -g backloop.dev
-
 COPY src src
 COPY branches branches
 COPY package.json package.json
@@ -22,6 +20,5 @@ COPY CHANGELOG.md CHANGELOG.md
 COPY --from=pnpm-container node_modules node_modules
 
 EXPOSE 8080/tcp
-RUN backloop.dev-proxy localhost:8080 9999
 ENTRYPOINT ["node", "src/index.js"]
 STOPSIGNAL SIGKILL
