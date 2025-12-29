@@ -22,6 +22,6 @@ COPY CHANGELOG.md CHANGELOG.md
 COPY --from=pnpm-container node_modules node_modules
 
 EXPOSE 8080/tcp
-RUN backloop.dev localhost:9998 9999
+RUN backloop.dev localhost:8080 9999
 ENTRYPOINT ["node", "src/index.js"]
 STOPSIGNAL SIGKILL
