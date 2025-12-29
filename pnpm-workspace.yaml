@@ -1,3 +1,9 @@
 packages:
-   - .
-   - shup-ha
+  - .
+  - shup-ha
+
+onlyBuiltDependencies:
+  - dprint
+  - esbuild
+  - sharp
+  - workerd

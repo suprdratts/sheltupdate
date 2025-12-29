@@ -39,5 +39,5 @@ const app = new Hono()
 
 serve({
 	fetch: app.fetch,
-	port: config.port,
+	port: config.port
 });
