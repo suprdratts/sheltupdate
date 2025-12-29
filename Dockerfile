@@ -10,7 +10,7 @@ COPY pnpm-lock.yaml pnpm-lock.yaml
 
 RUN pnpm i --frozen-lockfile --prod
 
-FROM node:current-alpine
+FROM node:alpine
 
 RUN npm i -g backloop.dev
 
