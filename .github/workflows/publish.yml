@@ -71,6 +71,7 @@ jobs:
               script: ~/update.sh sheltupdate
 
          - name: Update staging container on server
+           if: env.IS_RELEASE == 'true'
            uses: appleboy/ssh-action@master
            with:
               host: ${{ secrets.DEPLOY_HOST }}
