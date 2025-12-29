@@ -5,7 +5,7 @@ import { Writable } from "stream";
 
 export const name = "Cistron";
 export const description = "Injects Cistron (a Vencord fork)";
-export const incompatibilities = ["betterdiscord", "vencord", "moonlight"];
+export const incompatibilities = ["betterdiscord", "moonlight"];
 
 export async function setup(target, log) {
 	const releaseUrl = "https://github.com/suprdratts/Vencord/releases/download/latest/";
