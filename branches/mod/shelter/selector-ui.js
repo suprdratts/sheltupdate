@@ -56,7 +56,7 @@
 		SheltupdateNative.getCurrentHost().then(setCurrentHost),
 	]);
 	updateCurrent().then(() => {
-		if (window.Vencord && !currentBranches().includes("vencord") && !currentBranches().includes("equicord"))
+		if (window.Vencord && !currentBranches().includes("cistron"))
 			setVencordOtherwiseLoaded(true);
 
 		if (window.BdApi && !currentBranches().includes("betterdiscord")) setBdOtherwiseLoaded(true);
@@ -101,8 +101,8 @@
 			if (props.name === "shelter" && props.value) {
 				return "You need shelter to have access to this menu. Try uninstalling sheltupdate.";
 			}
-			if ((props.name === "vencord" || props.name === "equicord") && vencordOtherwiseLoaded()) {
-				return "Vencord or Equicord are currently loaded by some other mechanism.";
+			if ((props.name === "cistron") && vencordOtherwiseLoaded()) {
+				return "Cistron is currently loaded by some other mechanism.";
 			}
 			if (props.name === "betterdiscord" && bdOtherwiseLoaded()) {
 				return "BetterDiscord is currently loaded by some other mechanism.";
